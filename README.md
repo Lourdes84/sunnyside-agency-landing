@@ -21,7 +21,7 @@ The users should be able to:
 
 ### Links
 
-- Solution CODE: [https://github.com/lougc/sunnyside-landing-page/]
+- Solution CODE: [https://github.com/Lourdes84/sunnyside-agency-landing]
 - Live Site URL: [https://lougc.github.io/sunnyside-landing-page/]
 
 ## My process
