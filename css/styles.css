@@ -1,0 +1,330 @@
+/** GLOBAL **/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family:'Barlow', sans-serif;
+    max-width: 1920px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+/** HEADER **/
+
+.header {
+    height: 100vh;
+    background: rgb(62,191,255) url(../images/desktop/image-header.jpg)  no-repeat bottom;
+    background-size: contain;
+}
+
+.header__container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/** HEADER NAVIGATION **/
+
+.header__nav__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    transition: .4s;
+}
+
+.header__nav__link:hover {
+    font-family: 'Fraunces', serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: rgb(109,207,255); 
+}
+
+.header__nav__link--active, .header__nav__link--active:hover{
+    background-color: #fff;
+    font-family: 'Fraunces', serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.icon-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/** HEADER TITLE **/
+
+.header__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header__title h1 {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-weight: 900;
+    font-size: 3rem;
+    color: #fff;
+    padding: 5.5rem .5rem;
+}
+
+/** HEADER ANIMATION ARROW DOWN  **/
+
+.header__arrow {
+    animation: arrowAnimation 2s infinite;
+}
+
+@keyframes arrowAnimation  {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(50%); 
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/** GRID CONTAINER **/
+
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 550px);
+}
+
+.grid__container__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    padding: 2rem;
+    width: 60%;
+}
+
+.item-2, .item-3, .item-5, .item-6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.item-2 {
+    background-image: url(../images/desktop/image-transform.jpg);
+}
+
+.item-3 {
+    background-image: url(../images/desktop/image-stand-out.jpg);
+}
+
+.item-5 {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    justify-content: flex-end;
+}
+
+.item-6 {
+    background-image: url(../images/desktop/image-photography.jpg);
+    justify-content: flex-end;
+}
+
+.grid__container__item__title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.grid__container__item__paragraph {
+    color: rgb(127,125,133);
+    margin-bottom: 1rem;
+}
+
+.grid__container__item__link{
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.grid__container__item__link:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 110px;
+    height: .5rem;
+    border-radius: 15px;
+    background-color: hsl(51, 100%, 49%);
+    z-index: -1;
+}
+
+.link-2:hover::before {
+    background-color: hsl(7, 99%, 70%);
+}
+
+.grid__container__text__absolute {
+    color: hsl(198, 62%, 26%);
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.text-absolute {
+    width: 60%;
+}
+
+.grid__container__text__absolute__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: hsl(167, 40%, 24%);
+}
+
+/** SECTION TESTIMONIALS **/
+
+.testimonials {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.testimonials__title {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: 1.2rem;
+    color:  hsl(210, 4%, 67%);
+}
+
+.testimonials__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.testimonials__container__item {
+    padding: 2rem;  
+}
+
+.testimonials__image {
+    border-radius: 50%;
+    width: 100px;
+    padding: 2rem 0;
+}
+
+.testimonials__paragraph {
+    color: rgb(127,125,133);
+    margin-bottom: 2.5rem;
+    padding: 0rem 3rem;
+}
+
+.testimonials__author {
+    font-family: 'Fraunces', serif;
+}
+
+.testimonials__charge {
+    color: lightgray;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+
+/** IMAGES **/
+
+.images__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 350px;
+}
+
+.images__container-1, .images__container-2, .images__container-3, .images__container-4 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.images__container-1 {
+    background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+}
+
+.images__container-2 {
+    background-image: url(../images/desktop/image-gallery-orange.jpg);
+}
+.images__container-3 {
+    background-image: url(../images/desktop/image-gallery-cone.jpg);
+}
+
+.images__container-4 {
+    background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+}
+
+/** FOOTER **/
+
+.footer {
+    background-color: rgb(144,212,197);
+    color: rgb(44,117,102);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 1rem;
+}
+
+.footer__nav {
+    padding: 2rem;
+}
+
+.footer__nav__link {
+    text-decoration: none;
+    color: rgb(44,117,102);
+    padding: 1rem 1rem;
+    transition: .3s ease-in-out;
+}
+
+.footer__nav__link:hover {
+    color: #fff;
+}
+
+.footer__social {
+    padding: 3rem 0rem;
+}
+
+.footer__social svg {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.footer__social svg path:hover {
+    fill: #fff;
+}
+
+.footer__attribution {
+    text-align: center;
+}
+
+.footer__attribution a{
+    text-decoration: none;
+    color: rgb(16, 51, 44);
+}
